@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		655B11232A09F8C9004BC84B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B11222A09F8C9004BC84B /* AppDelegate.swift */; };
 		655B11252A09F8C9004BC84B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B11242A09F8C9004BC84B /* SceneDelegate.swift */; };
-		655B11272A09F8C9004BC84B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B11262A09F8C9004BC84B /* ViewController.swift */; };
+		655B11272A09F8C9004BC84B /* ViewControllerV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B11262A09F8C9004BC84B /* ViewControllerV1.swift */; };
 		655B112A2A09F8C9004BC84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655B11282A09F8C9004BC84B /* Main.storyboard */; };
 		655B112C2A09F8CA004BC84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655B112B2A09F8CA004BC84B /* Assets.xcassets */; };
 		655B112F2A09F8CA004BC84B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655B112D2A09F8CA004BC84B /* LaunchScreen.storyboard */; };
+		655B11382A09FB4F004BC84B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 655B11372A09FB4F004BC84B /* SnapKit */; };
+		655B113A2A0A0EDA004BC84B /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B11392A0A0EDA004BC84B /* UIResponder.swift */; };
+		655B113C2A0A1AE1004BC84B /* ViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B113B2A0A1AE1004BC84B /* ViewControllerV2.swift */; };
+		655B113E2A0A1CC5004BC84B /* KeyboardEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B113D2A0A1CC5004BC84B /* KeyboardEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		655B111F2A09F8C9004BC84B /* KeyboardView-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KeyboardView-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655B11222A09F8C9004BC84B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		655B11242A09F8C9004BC84B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		655B11262A09F8C9004BC84B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		655B11262A09F8C9004BC84B /* ViewControllerV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerV1.swift; sourceTree = "<group>"; };
 		655B11292A09F8C9004BC84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		655B112B2A09F8CA004BC84B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		655B112E2A09F8CA004BC84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		655B11302A09F8CA004BC84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655B11392A0A0EDA004BC84B /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
+		655B113B2A0A1AE1004BC84B /* ViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerV2.swift; sourceTree = "<group>"; };
+		655B113D2A0A1CC5004BC84B /* KeyboardEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655B11382A09FB4F004BC84B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +66,32 @@
 			children = (
 				655B11222A09F8C9004BC84B /* AppDelegate.swift */,
 				655B11242A09F8C9004BC84B /* SceneDelegate.swift */,
-				655B11262A09F8C9004BC84B /* ViewController.swift */,
+				655B11392A0A0EDA004BC84B /* UIResponder.swift */,
+				655B113F2A0A1CDC004BC84B /* V1 */,
+				655B11402A0A1CE3004BC84B /* V2 */,
 				655B11282A09F8C9004BC84B /* Main.storyboard */,
 				655B112B2A09F8CA004BC84B /* Assets.xcassets */,
 				655B112D2A09F8CA004BC84B /* LaunchScreen.storyboard */,
 				655B11302A09F8CA004BC84B /* Info.plist */,
 			);
 			path = "KeyboardView-Demo";
+			sourceTree = "<group>";
+		};
+		655B113F2A0A1CDC004BC84B /* V1 */ = {
+			isa = PBXGroup;
+			children = (
+				655B11262A09F8C9004BC84B /* ViewControllerV1.swift */,
+			);
+			path = V1;
+			sourceTree = "<group>";
+		};
+		655B11402A0A1CE3004BC84B /* V2 */ = {
+			isa = PBXGroup;
+			children = (
+				655B113D2A0A1CC5004BC84B /* KeyboardEvent.swift */,
+				655B113B2A0A1AE1004BC84B /* ViewControllerV2.swift */,
+			);
+			path = V2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +110,9 @@
 			dependencies = (
 			);
 			name = "KeyboardView-Demo";
+			packageProductDependencies = (
+				655B11372A09FB4F004BC84B /* SnapKit */,
+			);
 			productName = "KeyboardView-Demo";
 			productReference = 655B111F2A09F8C9004BC84B /* KeyboardView-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 655B11162A09F8C9004BC84B;
+			packageReferences = (
+				655B11362A09FB4F004BC84B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 655B11202A09F8C9004BC84B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655B11272A09F8C9004BC84B /* ViewController.swift in Sources */,
+				655B113C2A0A1AE1004BC84B /* ViewControllerV2.swift in Sources */,
+				655B113E2A0A1CC5004BC84B /* KeyboardEvent.swift in Sources */,
+				655B113A2A0A0EDA004BC84B /* UIResponder.swift in Sources */,
+				655B11272A09F8C9004BC84B /* ViewControllerV1.swift in Sources */,
 				655B11232A09F8C9004BC84B /* AppDelegate.swift in Sources */,
 				655B11252A09F8C9004BC84B /* SceneDelegate.swift in Sources */,
 			);
@@ -358,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		655B11362A09FB4F004BC84B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		655B11372A09FB4F004BC84B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 655B11362A09FB4F004BC84B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 655B11172A09F8C9004BC84B /* Project object */;
 }
