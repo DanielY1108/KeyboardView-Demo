@@ -17,6 +17,7 @@
 		655B113A2A0A0EDA004BC84B /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B11392A0A0EDA004BC84B /* UIResponder.swift */; };
 		655B113C2A0A1AE1004BC84B /* ViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B113B2A0A1AE1004BC84B /* ViewControllerV2.swift */; };
 		655B113E2A0A1CC5004BC84B /* KeyboardEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B113D2A0A1CC5004BC84B /* KeyboardEvent.swift */; };
+		65920AEF2A336FAE009F358B /* ViewControllerV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920AEE2A336FAE009F358B /* ViewControllerV3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		655B11392A0A0EDA004BC84B /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		655B113B2A0A1AE1004BC84B /* ViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerV2.swift; sourceTree = "<group>"; };
 		655B113D2A0A1CC5004BC84B /* KeyboardEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEvent.swift; sourceTree = "<group>"; };
+		65920AEE2A336FAE009F358B /* ViewControllerV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerV3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				655B11392A0A0EDA004BC84B /* UIResponder.swift */,
 				655B113F2A0A1CDC004BC84B /* V1 */,
 				655B11402A0A1CE3004BC84B /* V2 */,
+				65920AED2A336F6E009F358B /* V3 */,
 				655B11282A09F8C9004BC84B /* Main.storyboard */,
 				655B112B2A09F8CA004BC84B /* Assets.xcassets */,
 				655B112D2A09F8CA004BC84B /* LaunchScreen.storyboard */,
@@ -92,6 +95,14 @@
 				655B113B2A0A1AE1004BC84B /* ViewControllerV2.swift */,
 			);
 			path = V2;
+			sourceTree = "<group>";
+		};
+		65920AED2A336F6E009F358B /* V3 */ = {
+			isa = PBXGroup;
+			children = (
+				65920AEE2A336FAE009F358B /* ViewControllerV3.swift */,
+			);
+			path = V3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 				655B113C2A0A1AE1004BC84B /* ViewControllerV2.swift in Sources */,
 				655B113E2A0A1CC5004BC84B /* KeyboardEvent.swift in Sources */,
 				655B113A2A0A0EDA004BC84B /* UIResponder.swift in Sources */,
+				65920AEF2A336FAE009F358B /* ViewControllerV3.swift in Sources */,
 				655B11272A09F8C9004BC84B /* ViewControllerV1.swift in Sources */,
 				655B11232A09F8C9004BC84B /* AppDelegate.swift in Sources */,
 				655B11252A09F8C9004BC84B /* SceneDelegate.swift in Sources */,

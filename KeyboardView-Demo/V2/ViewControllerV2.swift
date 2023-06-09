@@ -35,7 +35,7 @@ class ViewControllerV2: UIViewController, KeyboardEvent {
     }
 
     private func configUI() {
-        self.view.backgroundColor = .lightGray
+        self.view.backgroundColor = .gray
         
         textField.borderStyle = .roundedRect
         textField.placeholder = "첫번째 텍스트 필드"

@@ -1,14 +1,13 @@
 //
-//  ViewController.swift
+//  ViewControllerV3.swift
 //  KeyboardView-Demo
 //
-//  Created by JINSEOK on 2023/05/09.
+//  Created by JINSEOK on 2023/06/09.
 //
 
 import UIKit
-import SnapKit
 
-class ViewControllerV1: UIViewController {
+class ViewControllerV3: UIViewController {
     
     let textField = UITextField()
     let imageView = UIImageView()
@@ -20,12 +19,6 @@ class ViewControllerV1: UIViewController {
         super.viewDidLoad()
         
         configUI()
-        setupKeyboardEvent()
-    }
-    
-    func setupKeyboardEvent() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillShow(_ sender: Notification) {
@@ -34,21 +27,7 @@ class ViewControllerV1: UIViewController {
         guard let keyboardFrame = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
               let currentTextField = UIResponder.currentResponder as? UITextField else { return }
         
-        // Y축으로 키보드의 상단 위치
-        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
-        // 현재 선택한 텍스트 필드의 Frame 값
-        let convertedTextFieldFrame = view.convert(currentTextField.frame,
-                                                  from: currentTextField.superview)
-        // Y축으로 현재 텍스트 필드의 하단 위치
-        let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
         
-        // Y축으로 텍스트필드 하단 위치가 키보드 상단 위치보다 클 때 (즉, 텍스트필드가 키보드에 가려질 때가 되겠죠!)
-        if textFieldBottomY > keyboardTopY {
-            let textFieldTopY = convertedTextFieldFrame.origin.y
-            // 노가다를 통해서 모든 기종에 적절한 크기를 설정함.
-            let newFrame = textFieldTopY - keyboardTopY/1.6
-            view.frame.origin.y -= newFrame
-        }
     }
     
     @objc func keyboardWillHide(_ sender: Notification) {
@@ -62,14 +41,16 @@ class ViewControllerV1: UIViewController {
     }
 
     private func configUI() {
-        self.view.backgroundColor = .lightGray
+        self.view.backgroundColor = .systemOrange
         
+        textField.delegate = self
         textField.borderStyle = .roundedRect
         textField.placeholder = "첫번째 텍스트 필드"
         
         imageView.image = UIImage(named: "life")
         imageView.contentMode = .scaleAspectFit
         
+        nextTextField.delegate = self
         nextTextField.borderStyle = .roundedRect
         nextTextField.placeholder = "두번째 텍스트 필드"
         
@@ -94,3 +75,31 @@ class ViewControllerV1: UIViewController {
 
 }
 
+extension ViewControllerV3: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if textField == self.textField {
+            view.frame.origin.y = 0
+            
+        } else if textField == self.nextTextField {
+            UIView.animate(withDuration: 0.3) {
+                let transform = CGAffineTransform(translationX: 0, y: -200)
+                self.view.transform = transform
+            }
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if textField == self.textField {
+            view.frame.origin.y = 0
+            
+        } else if textField == self.nextTextField {
+            UIView.animate(withDuration: 0.3) {
+                let transform = CGAffineTransform(translationX: 0, y: 0)
+                self.view.transform = transform
+            }
+        }
+    }
+}

@@ -27,8 +27,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         v2.title = "프로토콜 채택"
         v2.tabBarItem.image = UIImage(systemName: "shift")
         
+        let v3 = ViewControllerV3()
+        v3.title = "델리게이트 사용"
+        v3.tabBarItem.image = UIImage(systemName: "cloud.fill")
+        
         let tabbarC = UITabBarController()
-        tabbarC.viewControllers = [v1, v2]
+        tabbarC.viewControllers = [v1, v2, v3]
         
         window.rootViewController = tabbarC
         window.makeKeyAndVisible()
